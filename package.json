@@ -1,0 +1,22 @@
+{
+  "name": "cycle-sse-driver",
+  "version": "0.0.0",
+  "description": "Cycle.js driver for Server-Sent Events",
+  "main": "sse-driver.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jessaustin/cycle-sse-driver.git"
+  },
+  "keywords": [
+    "cyclejs"
+  ],
+  "author": "Jess Austin <jess.austin@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jessaustin/cycle-sse-driver/issues"
+  },
+  "homepage": "https://github.com/jessaustin/cycle-sse-driver#readme"
+}
