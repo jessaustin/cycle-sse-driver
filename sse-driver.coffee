@@ -14,12 +14,12 @@ module.exports = ->
         url
         (event=null) ->
           Observable.create (observable) ->
-            listener = (event) ->
+            listener = (event) ->               # necessary due to 'this' scope
               observable.onNext event
             if event?
               source.addEventListener event, listener
             else
               source.onmessage = listener
-            ->                                      # return a cleanup function
+            ->                                  # return a cleanup function
               source.close()
       ]
