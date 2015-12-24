@@ -1,20 +1,25 @@
 # copyright (c) 2015 Jess Austin <jess.austin@gmail.com>
 # released under MIT License
 
-{Observable: {create, fromCallback}} = require 'rx'
+{Observable} = require 'rx'
 
+# from a stream of URLs, generate a stream of [URL, function] pairs
+# the function returns streams of events
 module.exports = ->
   (url$) ->
     url$.map (url) ->
       source = new EventSource url
 
-      events$ = create (observable) ->
-        source.onmessage = (event) ->
-          observable.onNext event
-        ->                  # cleanup
-          source.close()
-
-      events$.events = (event) ->
-        fromCallback(source.addEventListener) event
-
-      [url, events$]
+      [
+        url
+        (event=null) ->
+          Observable.create (observable) ->
+            listener = (event) ->
+              observable.onNext event
+            if event?
+              source.addEventListener event, listener
+            else
+              source.onmessage = listener
+            ->                                      # return a cleanup function
+              source.close()
+      ]
