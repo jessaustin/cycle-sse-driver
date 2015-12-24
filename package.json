@@ -1,6 +1,6 @@
 {
   "name": "cycle-sse-driver",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Cycle.js driver for Server-Sent Events",
   "main": "sse-driver.js",
   "scripts": {
