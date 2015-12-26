@@ -6,7 +6,7 @@
 {Observable: {create}} = require 'rx'
 
 module.exports = (url) ->
-  source = new EventSource url          # XXX probably need error handling here
+  source = new EventSource url
   ->
     (event) ->    # function from event name to a stream of events of that type
       create (observable) ->
@@ -15,5 +15,8 @@ module.exports = (url) ->
             source.addEventListener event, listener
           else
             source.onmessage = listener
-        ->                                          # return a cleanup function
+        source.onerror = (err) ->
+          # with any other readyState, EventSource will keep trying
+          observable.onError err if err.target.readyState is EventSource.CLOSED
+        ->                   # XXX should we really return a cleanup function?
           source.close()
