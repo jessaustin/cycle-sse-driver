@@ -15,8 +15,5 @@ module.exports = (url) ->
             source.addEventListener event, listener
           else
             source.onmessage = listener
-        source.onerror = (err) ->
-          # with any other readyState, EventSource will keep trying
-          observable.onError err if err.target.readyState is EventSource.CLOSED
         ->                   # XXX should we really return a cleanup function?
           source.close()

@@ -5,7 +5,10 @@
   "main": "sse-driver.js",
   "scripts": {
     "clean": "rm -r *.js *.js.map coverage 2> /dev/null || true",
-    "prepublish": "coffee --compile --map *.coffee"
+    "prepublish": "coffee --compile --map *.coffee",
+    "pretest": "coffee --compile --map sse-driver.coffee",
+    "test": "istanbul cover --print none coffee test.coffee | faucet && istanbul report text-summary",
+    "posttest": "remap-istanbul --input coverage/coverage.json --output coverage/coffee --type html"
   },
   "repository": {
     "type": "git",
@@ -25,6 +28,10 @@
     "rx": "4"
   },
   "devDependencies": {
-    "coffee-script": "^1.10"
+    "coffee-script": "^1.10",
+    "eventsource": "*",
+    "faucet": "*",
+    "remap-istanbul": "*",
+    "tape": "4"
   }
 }
