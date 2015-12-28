@@ -47,8 +47,8 @@ Like other [Cycle.js][cycle] [drivers][driver], the best way to use
 
 ## Thanks!
 
-**cycle-sse-driver** is by Jess Austin and is distributed under the terms of the
-[MIT License](http://opensource.org/licenses/MIT). Any and all potential
+**cycle-sse-driver** is by Jess Austin and is distributed under the terms of
+the [MIT License](http://opensource.org/licenses/MIT). Any and all potential
 contributions of issues and pull requests are welcome!
 
 [cycle]: //cycle.js.org
