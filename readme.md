@@ -18,7 +18,7 @@ resorting to hacks like long-polling.
 The driver function should be called with an SSE URL. In the following code,
 assume reasonably-defined `view()` and `model()` functions:
 ```javascript
-makeSSEDriver = require('cycle-sse-driver');
+var makeSSEDriver = require('cycle-sse-driver');
 
 function intent(responses) {
   return {
