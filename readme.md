@@ -55,12 +55,12 @@ contributions of issues and pull requests are welcome!
 [driver]: //cycle.js.org/drivers.html
 [npmjs-img]: https://badge.fury.io/js/cycle-sse-driver.svg
 [npmjs-url]: //www.npmjs.org/package/cycle-sse-driver "npm Registry"
-[travis-img]: https://travis-ci.org/jessaustin/cycle-sse-driver.svg?branch=master
+[travis-img]: https://travis-ci.org/jessaustin/cycle-sse-driver.svg
 [travis-url]: //travis-ci.org/jessaustin/cycle-sse-driver "Travis"
 [cover-img]: https://coveralls.io/repos/jessaustin/cycle-sse-driver/badge.svg
 [cover-url]: //coveralls.io/github/jessaustin/cycle-sse-driver "Coveralls"
 [david-img]: https://david-dm.org/jessaustin/cycle-sse-driver.svg
 [david-url]: //david-dm.org/jessaustin/cycle-sse-driver "David"
-[david-dev-img]: https://david-dm.org/jessaustin/cycle-sse-driver/dev-status.svg
-[david-dev-url]: //david-dm.org/jessaustin/cycle-sse-driver#info=devDependencies
+[david-dev-img]:https://david-dm.org/jessaustin/cycle-sse-driver/dev-status.svg
+[david-dev-url]://david-dm.org/jessaustin/cycle-sse-driver#info=devDependencies
   "David for devDependencies"
