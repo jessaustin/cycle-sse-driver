@@ -1,3 +1,8 @@
+###
+Copyright (c) 2015 Jess Austin <jess.austin@gmail.com>
+Released under MIT License
+###
+
 if module?
   # this "require" is OK because browserify never sees this test file
   global.EventSource = require 'eventsource'

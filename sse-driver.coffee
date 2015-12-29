@@ -1,7 +1,9 @@
-# copyright (c) 2015 Jess Austin <jess.austin@gmail.com>
-# released under MIT License
+###
+Copyright (c) 2015 Jess Austin <jess.austin@gmail.com>
+Released under MIT License
 
-# Cycle.js driver for Server-Sent Events (SSE), also known as EventSource.
+Cycle.js driver for Server-Sent Events (SSE), also known as EventSource.
+###
 
 {Observable: {create}} = require 'rx'
 
