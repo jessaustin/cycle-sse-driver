@@ -1,11 +1,10 @@
 ###
-Copyright (c) 2015 Jess Austin <jess.austin@gmail.com>
+Copyright (c) 201{5,6} Jess Austin <jess.austin@gmail.com>
 Released under MIT License
 ###
 
-if module?
-  # this "require" is OK because browserify never sees this test file
-  global.EventSource = require 'eventsource'
+# this "require" is OK because browserify never sees this test file
+global.EventSource = require 'eventsource'
 
 sse = require './sse-driver'
 
@@ -35,7 +34,7 @@ require('tape') 'Cycle-SSE-Driver Test', (tape) ->
 
   server.listen port
 
-  tape.plan 4
+  tape.plan messages.length
   source = sse("http://localhost:#{port}/")()
   one_data = messages[0].data
   source 'one'
