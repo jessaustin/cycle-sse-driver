@@ -51,8 +51,8 @@ Like other [Cycle.js][cycle] [drivers][driver], the best way to use
 the [MIT License](http://opensource.org/licenses/MIT). Any and all potential
 contributions of issues and pull requests are welcome!
 
-[cycle]: //cycle.js.org
-[driver]: //cycle.js.org/drivers.html
+[cycle]: http://cycle.js.org
+[driver]: http://cycle.js.org/drivers.html
 [npmjs-img]: https://badge.fury.io/js/cycle-sse-driver.svg
 [npmjs-url]: //www.npmjs.org/package/cycle-sse-driver "npm Registry"
 [travis-img]: https://travis-ci.org/jessaustin/cycle-sse-driver.svg
