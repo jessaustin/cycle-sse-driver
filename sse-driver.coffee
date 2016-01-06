@@ -9,13 +9,13 @@ Cycle.js driver for Server-Sent Events, also known as EventSource.
 
 module.exports = (url) ->
   source = new EventSource url
-  ->
+  ->              # this is a source not a sink, so we don't care about args
     (event) ->    # function from event name to a stream of events of that type
       create (observable) ->
-        do (listener = observable.onNext.bind observable) ->
-          if event?
-            source.addEventListener event, listener
-          else
-            source.onmessage = listener
-        ->                   # XXX should we really return a cleanup function?
-          source.close()
+        listener = observable.onNext.bind observable
+        if event?
+          source.addEventListener event, listener
+        else
+          source.onmessage = listener
+        source.onerror = observable.onError.bind observable # XXX does this do anything?
+        source.close.bind source # XXX should we really return a cleanup function?

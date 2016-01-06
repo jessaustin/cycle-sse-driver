@@ -49,7 +49,8 @@ require('tape') 'Cycle-SSE-Driver Test', (tape) ->
     .subscribe ({data}) ->
       tape.equal data, messages[3].data, 'Proper data for generic message event type'
     ,
-      ->
+      (err) ->
+        console.log 'err:', err
     ,
       ->
         server.close()
