@@ -32,8 +32,10 @@ function intent(responses) {
 Cycle.run(function(responses) {
   var vtree$ = view(model(intent(responses)));
   return { DOM: vtree$ };
-}, { DOM: makeDOMDriver('#myId'),
-     SSE: makeSSEDriver('/sse-url') });
+}, {
+  DOM: makeDOMDriver('#myId'),
+  SSE: makeSSEDriver('/sse-url')
+});
 ```
 As demonstrated above, the response function may be called with an event type,
 in which case only events of that type will be streamed. If the response
